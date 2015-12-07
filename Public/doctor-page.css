@@ -1,0 +1,341 @@
+/*全局reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+content: '';
+content: none;
+}
+ // remember to define focus styles! // :focus {
+outline: 0;
+}
+ // remember to highlight inserts somehow! // ins {
+text-decoration: none;
+}
+del {
+text-decoration: line-through;
+}
+ // tables still need 'cellspacing="0"' in the markup // table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/*全局reset*/
+
+body{
+	font-family: Georgia,serif;
+	font-weight: 400;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+/*导航区*/
+nav {
+	width: 196.467px;
+	height: 100% ;
+	background:#ddd;
+	position:absolute;
+	left: 0;
+	top: 0;
+	border-right: 2px solid #c0c0c0;
+}
+nav > input,
+nav > a {
+	width: 196.467px;
+	height: 70px;
+	line-height: 70px;
+	border: 1px solid #c0c0c0;
+	position: fixed;
+	left: 0;
+	cursor: pointer;
+}
+nav > input {
+	opacity: 0;
+	z-index: 1000;
+}
+nav > a {
+	z-index: 10;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	text-shadow:1px 1px 1px rgba(151, 24,64,0.2);
+}
+
+#nav-1,#nav-1 + a {
+	top: 150px;
+}
+#nav-2,#nav-2 + a {
+	top: 230px;
+}
+#nav-3,#nav-3 + a {
+	top: 310px;
+}
+#nav-4,#nav-4 + a {
+	top: 390px;
+}
+
+nav input:checked + a,
+nav input:checked:hover +a {
+	background-color: #fff;
+}
+nav input:hover + a {
+	background-color: #f8f8f8;
+}
+
+/*内容区*/
+/*滑动部分*/
+.scroll{
+	/*width: 982.38px;*/
+	/*max-width: 1200px;*/
+	width: 1400px;
+	height: 100%;
+	margin-left: 196.467px;
+	position: relative;
+	left: 0;
+	top: 0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-ms-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-webkit-backface-visibility:hidden;
+	-webkit-transition:all 0.6s ease-in-out;
+	-moz-transition:all 0.6s ease-in-out;
+	-o-transition:all 0.6s ease-in-out;
+	-ms-transition:all 0.6s ease-in-out;
+	-transition:all 0.6s ease-in-out;
+}
+.panel {
+	/*height: 708px;*/
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+#nav-1:checked ~ .scroll {
+	-webkit-transform:translateY(0%);
+	-moz-transform:translateY(0%);
+	-ms-transform:translateY(0%);
+	-o-transform:translateY(0%);
+	transform:translateY(0%);
+}
+#nav-2:checked ~ .scroll {
+	-webkit-transform:translateY(-100%);
+	-moz-transform:translateY(-100%);
+	-ms-transform:translateY(-100%);
+	-o-transform:translateY(-100%);
+	transform:translateY(-100%);
+}
+#nav-3:checked ~ .scroll {
+	-webkit-transform:translateY(-200%);
+	-moz-transform:translateY(-200%);
+	-ms-transform:translateY(-200%);
+	-o-transform:translateY(-200%);
+	transform:translateY(-200%);
+}
+#nav-4:checked ~ .scroll {
+	-webkit-transform:translateY(-300%);
+	-moz-transform:translateY(-300%);
+	-ms-transform:translateY(-300%);
+	-o-transform:translateY(-300%);
+	transform:translateY(-300%);
+}
+
+/*职业信息*/
+.content-1 {
+	width: 100%;
+	height: 100%;
+}
+.content-1 form {
+	/*margin-top: 100px;*/
+	display: table;
+	padding: 100px;
+}
+.content-1 .tableRow {
+	display: table-row;
+}
+.content-1 .tableRow p{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 5px;
+}
+.content-1 .tableRow p:first-child {
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	width: 200px;
+	text-align: center;
+}
+.content-1 .tableRow input {
+	margin-top: 5px;
+	border: 1px solid #c0c0c0;
+	border-radius: 6px;
+    font-size: 10px;
+    height: 22.5px;
+    width: 150px;
+}
+.content-1 img {
+	width: 130px;
+}
+.content-1 p#button-photo {
+	padding-left: 30px;
+	vertical-align: bottom;
+}
+.content-1 p#button-photo input {
+	width: 100px;
+	height: 35px;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+}
+.botton-submit {
+	text-align: left;
+
+}
+p#botton-submit input {
+	height: 35px;
+	margin-top:15px;
+	margin-left: -15px;
+	width: 70px;
+	background-color: #f8f8f8;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+/*学历信息*/
+.content-2 {
+	width: 100%;
+}
+.content-2 fieldset{
+	margin: 1em ;
+	padding: 1em;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	width: 80%;
+	float: left;
+}
+.content-2 form {
+	display: table;
+}
+.content-2 .tableRow {
+	display: table-row;
+}
+.content-2 .tableRow p{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 5px;
+}
+.content-2 .tableRow p:first-child {
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	width: 200px;
+	text-align: right;
+}
+.content-2 .tableRow input {
+	margin-top: 10px;
+	border: 1px solid #c0c0c0;
+	border-radius: 6px;
+    font-size: 10px;
+    height: 22.5px;
+    width: 150px;
+}
+.content-2 img {
+	width: 30px;
+}
+/*.content-2 p#photo {
+	padding-left: 30px;
+	vertical-align: bottom;
+}
+.content-2 p#photo input {
+	width: 100px;
+	height: 35px;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+}*/
+/*获奖信息*/
+.content-3 {
+	width: 100%;
+	/*margin: 0 250px;*/
+}
+.content-3 fieldset{
+	margin: 1em ;
+	padding: 1em;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	width: 80%;
+	float: left;
+}
+.content-3 form {
+	display: table;
+}
+.content-3 .tableRow {
+	display: table-row;
+}
+.content-3 .tableRow p{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 5px;
+}
+.content-3 .tableRow p:first-child {
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	width: 200px;
+	text-align: right;
+}
+.content-3 .tableRow input {
+	margin-top: 10px;
+	border: 1px solid #c0c0c0;
+	border-radius: 6px;
+    font-size: 10px;
+    height: 22.5px;
+    width: 150px;
+}
+.content-3 img {
+	width: 30px;
+}
+/*.content-3 table tr th:nth-child(2) {
+	width: 250px;
+}*/
+/*患者评价*/
+table{
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+td, tr,th {
+	border: 1px solid gray;
+	padding: 5px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+th {
+	width: 150px;
+	height: 30px;
+}
+.content-4 {
+	width: 100%;
+	margin-top: 150px;
+	margin-left: 200px;
+}
+

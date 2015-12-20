@@ -21,10 +21,9 @@ class IndexAction extends Action {
 				'current_job_place'=>I('current_job_place',''),
 				'contacts'=>I('contacts','')
 			);
-// echo $data_basic;
-// die;
 
-		if( M('huaxi')->data($data_basic)->add()){//如果填写信息成功
+
+		if( M('data1')->data($data_basic)->add()){//如果填写信息成功
 				$this->success('填写成功，请完善其他信息','Index/index');//发布成功，跳转到Index/index控制器
 			}else{//发布失败
 				$this->error('填写失败，请重试...');
@@ -54,10 +53,9 @@ class IndexAction extends Action {
 				'highest_pos_place'=>I('highest_pos_place','')
 			);
 
-// echo $data_basic2;
-// die;
 
-		if( M('huaxi2')->data($data_basic2)->add()){//如果填写信息成功
+
+		if( M('data2')->data($data_basic2)->add()){//如果填写信息成功
 				$this->success('填写成功，请完善其他信息','Index/index');//发布成功，跳转到Index/index控制器
 			}else{//发布失败
 				$this->error('填写失败，请重试...');
@@ -86,7 +84,7 @@ class IndexAction extends Action {
 // echo $data_basic2;
 // die;
 
-		if( M('huaxi3')->data($data_basic3)->add()){//如果填写信息成功
+		if( M('data3')->data($data_basic3)->add()){//如果填写信息成功
 				$this->success('填写成功，请完善其他信息','Index/index');//发布成功，跳转到Index/index控制器
 			}else{//发布失败
 				$this->error('填写失败，请重试...');

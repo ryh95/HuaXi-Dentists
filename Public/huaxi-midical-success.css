@@ -21,12 +21,10 @@ section div {
 	margin: auto;
 	background-color: rgba(255,255,255,0.5);
 }
-section div h1 {
-	margin: 20px 0;
-	font-size: 14px;
-}
+
 section div form {
 	font-size: 13px;
+	margin-top:40px;
 }
 section div form .text-input {
 	margin-top: 16px;
@@ -36,6 +34,9 @@ section div form .text-input {
     font-size: 10px;
     height: 22.5px;
     width: 150px;
+}
+section div form .ali {
+	margin-right: -2.5em;
 }
 
 section div form .botton {

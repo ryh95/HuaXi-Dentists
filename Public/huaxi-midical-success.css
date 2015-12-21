@@ -51,3 +51,12 @@ section div form .botton {
     width: 90.5px;
     background-color:#fff; 
 }
+
+section div form .password {
+	margin-right: 0px;
+}
+section div form label{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}

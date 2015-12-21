@@ -5,7 +5,7 @@
 	class LoginAction extends Action
 	{
 		/**
-		 * 登录视图
+		 * 登录视图加载
 		 */
 		public function index()
 		{
@@ -28,7 +28,7 @@
 			$user = M('user')->where(array('username'=>$username))->find();
 //判断用户名或者密码是否正确
 			if(!$user||$user['passward'] != $pwd){
-				$this->error('账号或密码错误');
+				$this->error('账号或密码错误,请重试');
 			}
 //如果用户被锁定也不能登录
 			if($user['lock']){
@@ -54,7 +54,6 @@
 			//然后跳转到Index控制器，然后Index控制器加载doctor-page页面
 			$this->redirect('Index/index');
 		}
-
 
 	}
 

@@ -14,7 +14,8 @@
 				账号：<input class="text-input" type="text" name="id"><br>
 				密码：<input class="text-input" type="password" name="pwd"><br>
 				<input class="botton" type="submit" value="登陆">
-				<input class="botton" type="submit" value="注册">
+				<!-- <input class="botton" type="submit" value="注册"> -->
+				<a href="../Register/huaxi-midical-register.html" class="botton2">注册</a>
 			</form>
 		</div>
 	</section>

@@ -1,9 +1,23 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class IndexAction extends Action {
+class IndexAction extends CommonAction {
+
+	/**加载医生界面的模板
+	 * @return [type]
+	 */
     public function index(){
     	//加载Tpl/doctor-page.html
 		$this->display('doctor-page');
+    }
+
+    /**退出至登录页面的方法
+     * @return [type]
+     */
+    public function logout(){
+    	//清除session
+    	session_unset();
+    	session_destroy();
+    	$this->redirect('Login/index');
     }
 /*
 处理医生填写的基本信息的页面
@@ -81,8 +95,6 @@ class IndexAction extends Action {
 				'staff_ratio'=>I('staff_ratio','')
 			);
 
-// echo $data_basic2;
-// die;
 
 		if( M('data3')->data($data_basic3)->add()){//如果填写信息成功
 				$this->success('填写成功，请完善其他信息','Index/index');//发布成功，跳转到Index/index控制器
